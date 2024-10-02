@@ -1,0 +1,14 @@
+{% load static %}
+
+<li>
+    <article class="post">
+        <a href="{% url "post-detail-page" "the-mountains" %}"> {% comment %} Here you can use slug="the-mountains" or keep in order without mentioning slug keyword {% endcomment %}
+            <img src="{% static "blog/images/mountains.jpg" %}" alt="Mountain Hiking">
+            <div class="post_content">
+                <h3>Mountain Hiking<h3>
+                <p>I have never in my life claimed to be an adventurer or outdoors lover – until I started hiking in the mountains. </p>
+            </div>
+        </a>
+    </article>
+    
+</li>

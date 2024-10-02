@@ -1,0 +1,41 @@
+{% extends "base.html"%}
+{% load static %}
+
+{%block title%}
+    My Blog
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post.css" %}"> 
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock  %}
+
+{%block content%}
+
+    <section id="welcome">
+        <header>
+            <img src= "{% static "blog/images/himanshu.jpg" %}" alt="Himanshu-The Author Of This Blog">
+            <h2>HIMANSHU'S BLOG</h2>
+        </header>
+            <p>Hey I'm Himanshu and i love to code and read.Keen for knowledge</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+        <ul>
+            {% include "blog/includes/post.html" %}
+            {% include "blog/includes/post.html" %}
+            {% include "blog/includes/post.html" %}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>
+            Hi, I'm Himanshu. I'm a software developer and a passionate learner
+        </p>
+        <p>
+            My goal is to keep growing as a developer and a better human being
+        </p>
+    </section>
+{% endblock %}
