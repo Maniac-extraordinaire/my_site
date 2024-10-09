@@ -17,15 +17,17 @@
             <img src= "{% static "blog/images/himanshu.jpg" %}" alt="Himanshu-The Author Of This Blog">
             <h2>HIMANSHU'S BLOG</h2>
         </header>
-            <p>Hey I'm Himanshu and i love to code and read.Keen for knowledge</p>
+            <p>Hey I'm Himanshu</p>
+            <P>I love to code and read.</p>
+            <p>Keen for knowledge</p>
     </section>
 
     <section id="latest-posts">
         <h2>My Latest Thoughts</h2>
         <ul>
-            {% include "blog/includes/post.html" %}
-            {% include "blog/includes/post.html" %}
-            {% include "blog/includes/post.html" %}
+            {% for post in index_page_posts %}
+                {% include "blog/includes/post.html" %}
+            {% endfor %}
         </ul>
     </section>
 
